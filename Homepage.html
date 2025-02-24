@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outreach Program</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Import Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Reduced gap to bring logo and nav closer */
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .navbar .logo {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .navbar nav {
+      flex: 1;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      position: relative;
+      transition: transform 0.3s ease, color 0.3s ease;
+      padding: 5px;
+    }
+
+    /* Underline animation for nav links */
+    .navbar ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 2px;
+      background-color: #ff5f5f;
+      transition: width 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #ff5f5f;
+      transform: scale(1.2); /* Enlarge the nav link on hover */
+    }
+
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Full-screen background */
+    .hero {
+      width: 100%;
+      height: 100vh;
+      background: url('pic.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Dark overlay for readability */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Content inside hero section with fade-in animation */
+    .content {
+      color: white;
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Button styling */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      color: white;
+      background: #ff5f5f;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff2f2f;
+    }
+
+    /* Footer Section */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Social Media Icons */
+    .social-icons a {
+      color: white;
+      font-size: 20px;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ff5f5f;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Outreach Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Programs</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="content">
+      <h1>Kamay ng pag-asa: Pagbibigay ng ngiti para sa kabataan (St. Maria De Mattias Center)</h1>
+      <p>Making a difference in the community, one step at a time.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Outreach Program. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript for dynamic navbar background on scroll -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(0, 0, 0, 0.9)';
+      } else {
+        navbar.style.background = 'rgba(0, 0, 0, 0.7)';
+      }
+    });
+  </script>
+
+</body>
+</html>
